@@ -1,0 +1,5 @@
+// github.com/whatgoodisaroad/bezier-js
+// MIT Licenced
+export function Bezier(e){function h(a,b,d){return f(b)/(f(a)*f(b-a))*Math.pow(d,a)*Math.pow(1-d,b-a)}function f(a){return 1>=a?1:a*f(a-1)}function g(a,b){return b.map(function(b){return b*a})}function k(a,b){return a.map(function(a,c){return a+b[c]})}function p(a,b){return a.map(function(a,c){return a-b[c]})}function l(){for(var a=[],b=0;b<q;++b)a.push(0);return a}var m=e.length,q=e[0].length,n=10;this.setPoints=function(a){e=a};this.setPoint=function(a,b){e[a]=b};this.setRefinementIterations=function(a){n=
+  a};this.b_t=function(a){for(var b=m-1,d=l(),c=0;c<=b;++c)d=k(d,g(h(c,b,a),e[c]));return d};this.differential_t=function(a){for(var b=m-1,d=l(),c=0;c<=b-1;++c)d=k(d,g(h(c,b-1,a),p(e[c+1],e[c])));return g(b,d)};this.derivative_t=function(a,b,d){d=this.differential_t(d);return 0===d[a]?0:d[b]/d[a]};this.approximate=function(a,b,d){for(var c=d,e,f,g=0;g<n;++g){e=this.b_t(c)[a];if(d===e)break;f=this.derivative_t(a,b,c);c-=(e-d)*f;c=Math.max(0,Math.min(1,c))}return this.b_t(c)[b]};this.y_x=function(a){return this.approximate(0,
+  1,a)};this.x_y=function(a){return this.approximate(1,0,a)}};

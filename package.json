@@ -1,0 +1,16 @@
+{
+  "name": "@jrabausch/squircle",
+  "version": "0.1.0",
+  "description": "CSS Squircle Polygon Generator",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "serve": "serve ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}
