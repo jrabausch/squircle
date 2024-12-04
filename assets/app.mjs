@@ -11,6 +11,7 @@ const rect = document.getElementById('rect');
 const output = document.getElementById('code');
 const copyButton = document.getElementById('copy-button');
 const resizeButton = document.getElementById('resize-button');
+const borderRadiusButton = document.getElementById('border-radius-button');
 const rectDimensions = document.getElementById('rect-dimensions');
 
 const round = (value) => {
@@ -149,11 +150,8 @@ inputSteps.addEventListener('input', () => {
   handleUpdate();
 });
 
-rect.addEventListener('click', (e) => {
+borderRadiusButton.addEventListener('click', (e) => {
   e.preventDefault();
-  if (e.target !== rect) {
-    return;
-  }
   const current = rect.style.getPropertyValue('background-color');
   if (current === '') {
     rect.style.setProperty('background-color', 'violet');

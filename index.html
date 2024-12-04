@@ -5,15 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Squircle Generator</title>
+  <link rel="icon" type="image/png" href="assets/squircle.png">
   <meta name="description" content="CSS Squircle Polygon Generator">
-  <link rel="stylesheet" href="styles.css">
-  <script type="module" src="app.mjs"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="module" src="assets/app.mjs"></script>
 </head>
 
 <body>
   <div class="wrapper">
     <div class="controls">
-      <h1>Squircle</h1>
+      <h1 class="heading">Squircle</h1>
       <div class="input-control">
         <div class="input-header">
           <label for="radius-input">Radius</label>
@@ -38,7 +39,10 @@
       <div class="code-wrapper">
         <code id="code"></code>
         <i id="copy-button" class="gg-copy" title="Copy to clipboard"></i>
-      </div>   
+      </div>
+      <div class="bottom-action">
+        <a id="border-radius-button" href="#">Toggle border radius visibility</a>
+      </div>
     </div>
     <div class="preview">
       <div id="rect">
